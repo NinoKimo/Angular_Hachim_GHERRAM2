@@ -1,0 +1,41 @@
+<div class="card">
+    <header class="card-header">
+        <p class="card-header'title">
+            {{post.title}}
+        </p>
+    </header>
+    <div class="card-content">
+        <div class="content">
+            {{post.description}}
+            <br>
+            {{post.link}}
+            <br>        
+        </div>
+    </div>
+    
+        <footer class="card-footer">
+            <a href="#" class="card-footer-item">Ouvrir</a>
+            <span class="button are-medium"></span>
+        
+        <button class="button is-warning card footer-item" (click)="editPublication(post)">
+            <span>Modification</span>
+            <span class="button are-medium">
+                <i class="fas fa-times"></i>
+            </span>
+        </button>
+        
+        <!-- <button class="button is-warning card footer-item"> (click)=""
+            <span>Créer</span>
+            <span class="button are-medium">
+                <i class="fas fa-times"></i>
+            </span>
+        </button>  -->
+
+        <button class="buttonis-danger" (click)="deletePublication(post)">
+            <span>Supprimer</span>
+            <span class="button are-medium">
+                <i class="fas fa-times"></i>
+            </span> 
+        </button>
+    </footer>
+</div>

@@ -1,0 +1,27 @@
+
+<!-- Afficher avec une boucle *ngFor une liste de composant Post (PostComponent) -->
+
+<div class="column">
+    <div class="column right has-text-centered">
+        <app-add (addPostEvent)="addItem($event)"></app-add>
+    </div>
+    <div class="column left">
+        <app-post class="espace" [post]="p"  *ngFor="let p of posts" (deletePostEvent)="delete($event)"></app-post>
+    </div>
+</div>
+
+<!--
+<div class="container">
+	<div class="notification">
+			<div class="colums">
+
+		<div class="column">
+    			<div class="column right has-text-centered">
+        		<app-add (addPostEvent)="addItem($event)"></app-add>
+    			</div>
+    		<div class="column left">
+        		<app-post class="espace" [post]="p"  *ngFor="let p of posts" (deletePostEvent)="delete($event")></app-post>
+    		</div>
+		</div>
+	</div>
+</div> -->
